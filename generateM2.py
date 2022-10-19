@@ -3,9 +3,9 @@ import pandas as pd
 from sys import exit
 from matplotlib import image
 
-data = int(65419356)
+data = int(20)
 usr_input = data
-err_corr_words = 6
+err_corr_words = 5
 pixel_size = 5
 
 max_codewords = 10
@@ -79,7 +79,7 @@ for i in range(8,raster.shape[0],2):
 
 numbers = []
 
-while np.floor(data%10) != 0:
+while np.floor(data%10) != 0 or data//10 != 0:
     numbers.append(data%10)
     data = data//10
 
